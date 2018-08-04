@@ -1,13 +1,14 @@
- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.ecw</groupId>
-  <artifactId>HI</artifactId>
+  <artifactId>HealowInsights</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>HI</name>
+
+  <name>HealowInsights</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -16,9 +17,15 @@
 
 
 
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 
+<dependencies>
+    
+<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.7.0</version>
+  <type>maven-plugin</type>
+</dependency>
     
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -49,8 +56,8 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>6.9.8</version>
-     <scope>compile</scope>
+    <version>6.8</version>
+     <scope>test</scope>
 </dependency>
 
 
@@ -79,7 +86,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.5.1</version>
+          <version>3.7.0</version>
           <configuration>
             <!-- put your configurations here -->
           </configuration>
@@ -93,7 +100,7 @@
         <version>2.22.0</version>
         <configuration>
           <suiteXmlFiles>
-            <File>testng.xml</File>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -103,4 +110,4 @@
     </pluginManagement>
       </build>
 
-</project>
+ </project>
